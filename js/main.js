@@ -9,5 +9,16 @@ function afficherPays(liste) {
   conteneurGrille.replaceChildren(fragment);
 }
 
+const filtreRegion = document.getElementById('filtre-region');
+
+filtreRegion.addEventListener('change', (e) => {
+  const region = e.target.value;
+  if (region === 'toutes') {
+    afficherPays(PAYS_DATA);
+  } else {
+    const paysFiltres = PAYS_DATA.filter(p => p.region === region);
+    afficherPays(paysFiltres);
+  }
+});
 
 afficherPays(PAYS_DATA);

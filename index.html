@@ -22,13 +22,22 @@
     </header>
     <main id="principal" tabindex="-1"></main>
     <main>
-        <section class="results-grid">
+        <section >
             <h2>Rechercher un pays</h2>
             <form action="#" method="GET">
                 <label for="recherche">Pays :</label>
                 <input type="text" id="recherche" name="recherche" placeholder="Ex: France..." required>
                 <button type="submit">Rechercher</button>
             </form>
+                <label for="filtre-region" style="margin-top: 10px; display: block;">Filtrer par région :</label>
+                <select id="filtre-region">
+                <option value="toutes">Toutes les régions</option>
+                <option value="Europe">Europe</option>
+                <option value="Asie">Asie</option>
+                <option value="Amériques">Amériques</option>
+                <option value="Afrique">Afrique</option>
+                <option value="Océanie">Océanie</option>
+            </select>
         </section>
         <div role="status" aria-live="polite">
 
