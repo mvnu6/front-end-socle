@@ -21,4 +21,16 @@ filtreRegion.addEventListener('change', (e) => {
   }
 });
 
+conteneurGrille.addEventListener('click', (e) => {
+  const carte = e.target.closest('.carte');
+  if (!carte) return;
+
+  const codePays = carte.dataset.code;
+  const paysSelectionne = PAYS_DATA.find(p => p.code === codePays);
+
+  if (paysSelectionne) {
+    alert(`Détails de ${paysSelectionne.nom}\nCapitale: ${paysSelectionne.capitale}\nPopulation: ${paysSelectionne.population.toLocaleString('fr-FR')}`);
+  }
+});
+
 afficherPays(PAYS_DATA);
