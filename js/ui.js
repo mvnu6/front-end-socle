@@ -18,3 +18,25 @@ export function creerCarte(pays) {
   article.append(titre, cap, reg, pop);
   return article;
 }
+
+export function annoncerStatut(message) {
+  const zoneStatut = document.querySelector('[role="status"]');
+  if (zoneStatut) zoneStatut.textContent = message;
+}
+
+
+export function afficherErreur(conteneur, message, callbackReessayer) {
+  conteneur.replaceChildren();
+  const div = document.createElement('div');
+  div.classList.add('erreur-box');
+
+  const p = document.createElement('p');
+  p.textContent = message;
+
+  const btn = document.createElement('button');
+  btn.textContent = 'Réessayer';
+  btn.addEventListener('click', callbackReessayer);
+
+  div.append(p, btn);
+  conteneur.append(div);
+}
