@@ -1,7 +1,8 @@
 import { PAYS_DATA } from './data.js';
 import { creerCarte } from './ui.js';
 
-const conteneurGrille = document.querySelector('.results-grid') || document.querySelector('section:last-of-type');
+const conteneurGrille = document.querySelector('.results-grid');
+const filtreRegion = document.getElementById('filtre-region');
 
 function afficherPays(liste) {
   const fragment = document.createDocumentFragment();
@@ -9,7 +10,6 @@ function afficherPays(liste) {
   conteneurGrille.replaceChildren(fragment);
 }
 
-const filtreRegion = document.getElementById('filtre-region');
 
 filtreRegion.addEventListener('change', (e) => {
   const region = e.target.value;
