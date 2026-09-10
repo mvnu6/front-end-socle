@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/token.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <script type="module" src="js/main.js"></script>
@@ -13,7 +13,7 @@
     <a href="#principal">Aller au contenu principal</a>
     <header>
         <h1>ExploMonde</h1>
-        <nav>
+        <nav aria-label="Navigation principal">
             <ul>
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#">À propos</a></li>
@@ -21,7 +21,7 @@
         </nav>
     </header>
     <main id="principal" tabindex="-1">
-        <section >
+        <section aria-labelledby="titre-recherche" >
             <h2>Rechercher un pays</h2>
             <form action="#" method="GET">
                 <label for="recherche">Pays :</label>
@@ -38,8 +38,8 @@
                 <option value="Océanie">Océanie</option>
             </select>
         </section>
+        
         <div role="status" aria-live="polite">
-
         </div>
         <section aria-labelledby="titre-resultats">
             <h2 id="titre-resultats">Résultats</h2>
