@@ -5,6 +5,7 @@ const conteneurGrille = document.querySelector('.results-grid');
 const filtreRegion = document.getElementById('filtre-region');
 const champRecherche = document.getElementById('recherche');
 const formulaire = document.querySelector('form');
+formulaire.addEventListener('submit', (e) => e.preventDefault());
 
 let minuteur;
 let controleur;
@@ -71,7 +72,6 @@ champRecherche.addEventListener('input', () => {
   }, 300);
 });
 
-formulaire.addEventListener('submit', (e) => e.preventDefault());
 
 conteneurGrille.addEventListener('click', (e) => {
   const carte = e.target.closest('.carte');
