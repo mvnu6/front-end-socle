@@ -1,0 +1,28 @@
+:root {
+  
+  --bg-primary: #f8f9fa;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+  --accent-color: #e65100;
+  --border-color: #dddddd;
+
+  
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #121212;
+    --bg-card: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --border-color: #333333;
+  }
+}
