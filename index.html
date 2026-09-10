@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="#principal">Aller au contenu principal</a>
     <header>
         <h1>ExploMonde</h1>
         <nav>
@@ -15,6 +16,7 @@
             </ul>
         </nav>
     </header>
+    <main id="principal" tabindex="-1"></main>
     <main>
         <section>
             <h2>Rechercher un pays</h2>
@@ -24,9 +26,11 @@
                 <button type="submit">Rechercher</button>
             </form>
         </section>
-        <section>
-            <h2>Résultats</h2>
-        </section>
+        <div role="status" aria-live="polite">
+
+        </div>
+        <section aria-labelledby="titre-resultats">
+            <h2 id="titre-resultats">Résultats</h2>
         <article>
                 <h3>France</h3>
                 <p>Capitale : Paris</p>
