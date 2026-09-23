@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>StreamFlix</h1>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="./index.html" aria-current="page">accueil</a></li>
+                <li><a href="./liste.html">liste</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <section>
+                <h2>Catalogue</h2>
+                <div  id="catalog-container" class="results-grid">
+                <form id="filter-form" onsubmit="event.preventDefault();">
+                <label for="search-input">Rechercher une série</label>
+                <input type="search" id="search-input" placeholder="Ex: Breaking Bad..." minlength="2">
+
+                <label for="genre-select">Genre</label>
+                <select id="genre-select">
+                    <option value="">Tous les genres</option>
+                </select>
+
+                <label for="sort-select">Trier par</label>
+                <select id="sort-select">
+                    <option value="rating-desc">Note (décroissante)</option>
+                    <option value="rating-asc">Note (croissante)</option>
+                    <option value="year-desc">Année (récente)</option>
+                    <option value="year-asc">Année (ancienne)</option>
+                </select>
+            </form>
+            <p id="results-count" aria-live="polite"></p>
+            </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 StreamFlix</p>
+    </footer>
+</body>
+</html>

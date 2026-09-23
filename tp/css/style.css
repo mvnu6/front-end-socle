@@ -1,0 +1,51 @@
+:root{
+    --primary-color: #5500ff;
+    --bg-color: aliceblue;
+    --bg-card: #d0cbcb7b;
+    --espace-moyen: 16px;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555555;
+    --accent-color:#146549 ;
+    --border-color:#0080ff ;
+    --error-color: #ff0000;
+    
+
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    padding: var(--space-md);
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+
+}
+.results-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+
+}
+
+@media (min-width: 768px) {
+  .results-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
